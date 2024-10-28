@@ -1,7 +1,8 @@
 package HW.OOP.Zoo;
 
-public class Animal {
+public abstract class Animal implements Pet{
     String name;
+
 
     public Animal() {
 
@@ -11,9 +12,10 @@ public class Animal {
         this.name = name;
     }
 
-    void makeSound() {
-        System.out.print("Животное издает звук: ");
-    }
+   abstract void makeSound();
+
+    abstract void move();
+
 
     public String getName() {
         return name;

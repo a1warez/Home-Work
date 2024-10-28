@@ -1,6 +1,6 @@
 package HW.OOP.Zoo;
 
-public class Cat extends Animal {
+public class Cat extends Animal implements Pet{
     String cat;
 
     public Cat(String cat) {
@@ -22,14 +22,28 @@ public class Cat extends Animal {
 
     @Override
     void makeSound() {
-        super.makeSound();
-        System.out.println("Кошка мяукает: Мяу");
+        System.out.println("Животное издает звук: Кошка мяукает: Мяу");
+    }
+
+    @Override
+    void move() {
+        System.out.println("Кошка ходит на четвереньках");
     }
 
     @Override
     void eat() {
         super.eat();
         System.out.println("Кошка ест рыбу");
+    }
+
+    @Override
+    public void play() {
+        System.out.println("Поиграть с кошкой");
+    }
+
+    @Override
+    public void beFriedly() {
+        System.out.println("Демонстрации дружелюбного поведения от кошки");
     }
 
     @Override

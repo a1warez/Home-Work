@@ -1,6 +1,6 @@
 package HW.OOP.Zoo;
 
-public class Dog extends Animal implements Pet {
+public final class Dog extends Animal implements Pet {
     String dog;
 
     public Dog(String dog) {

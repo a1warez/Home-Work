@@ -1,6 +1,6 @@
 package HW.OOP.Zoo;
 
-public class Bird extends Animal implements Pet{
+public final class Bird extends Animal {
     String bird;
     boolean canFly;
 

@@ -1,6 +1,6 @@
 package HW.OOP.Zoo;
 
-public class Bird extends Animal {
+public class Bird extends Animal implements Pet{
     String bird;
     boolean canFly;
 
@@ -36,10 +36,17 @@ public class Bird extends Animal {
 
     @Override
     void makeSound() {
-        super.makeSound();
-        System.out.println("Птица чирикает: Чирик-чирик");
+        System.out.println("Животное издает звук: Птица чирикает: Чирик-чирик");
     }
 
+    @Override
+    void move() {
+        if (canFly == true){
+            System.out.println("Птица умеет летает");
+        }else if (canFly == false){
+            System.out.println("Птица не умеет летает");
+        }
+    }
 
     public void canFly(boolean canFly) {
         this.canFly = canFly;
@@ -49,6 +56,16 @@ public class Bird extends Animal {
     void eat() {
         super.eat();
         System.out.println("Птица ест семена");
+    }
+
+    @Override
+    public void play() {
+        System.out.println("Не поиграть, не домашнее животное");
+    }
+
+    @Override
+    public void beFriedly() {
+        System.out.println("Не пойдет, не домашнее животное");
     }
 
     @Override

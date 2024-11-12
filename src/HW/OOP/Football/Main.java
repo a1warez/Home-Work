@@ -1,26 +1,44 @@
 package HW.OOP.Football;
 
 public class Main {
-    public static void main(String[] args) {
-        Player player1 = new Player("p1",8);
-        Player player2 = new Player("p2",8);
-        Player player3 = new Player("p3",10);
-        Player player4 = new Player("p4",8);
-        Player player5 = new Player("p5",9);
-        Player player6 = new Player("p6", 9);
-        player6.info();
+   public static void main(String[] args) {
+      Game game = new Game();
 
-        player1.run();
-        player1.run();
-        player1.run();
-        player1.run();
-        player1.run();
-        player1.run();
-        player1.run();
-        player1.run();
-        player1.run();
+      System.out.println(game.getPlayer());
 
-        player6.info();
+      game.addPlayer("Player1");
+      game.addPlayer("Player2");
+      game.addPlayer("Player3");
+      System.out.println();
 
-    }
+      game.info();
+
+      System.out.println();
+      game.addPlayer("Player4");
+      game.addPlayer("Player5");
+      game.addPlayer("Player6");
+      game.addPlayer("Player7");
+      game.info();
+      System.out.println();
+      System.out.println(game.getPlayer());
+      System.out.println();
+      game.checkName("Player3");
+      System.out.println();
+      game.getPlayer().get(1).run();
+      game.getPlayer().get(1).run();
+      game.getPlayer().get(1).run();
+      game.getPlayer().get(1).run();
+      game.getPlayer().get(1).run();
+      game.getPlayer().get(1).run();
+      game.getPlayer().get(1).run();
+      game.getPlayer().get(1).run();
+      game.getPlayer().get(1).run();
+      game.getPlayer().get(1).run();
+
+
+
+
+
+   }
+
 }

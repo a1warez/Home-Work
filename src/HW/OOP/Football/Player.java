@@ -1,49 +1,48 @@
 package HW.OOP.Football;
 
+
+import java.util.Random;
+
 public class Player {
-    String name;
-    int stamina;
+    private final Game game;
+    private int stamina;
+    Random random = new Random();
+    private final String name;
 
     static int MAX_STAMINA = 10;
     static int MIN_STAMINA = 0;
 
-    static int maxPlayers = 6;
-    static int countPlayers = 0;
-    static int freeSeats = 6;
-
-
-    public Player() {
+    public Player(String name,Game game) {
+        this.stamina = random.nextInt(8, MAX_STAMINA + 1);
+        this.name = name;
+        this.game = game;
     }
 
-    public Player(String name, int stamina) {
-        if (countPlayers < maxPlayers){
-            this.name = name;
-            this.stamina = stamina;
-            countPlayers++;
-            freeSeats--;
-        }
-    }
 
     public int getStamina() {
         return stamina;
     }
-
-    public void run(){
-        if (stamina > MIN_STAMINA){
+    public String getName() {
+        return name;
+    }
+    public void run() {
+        if (stamina > MIN_STAMINA) {
             stamina--;
-            System.out.println("Игрок пробежал его стамина составляет: " + stamina);
-        }else if (stamina == MIN_STAMINA){
+            System.out.println("Игрок по имени " + name + " пробежал его стамина составляет: " + stamina);
+        } else if (stamina == MIN_STAMINA) {
             System.out.println("Игрок выдохся и уходит с поля");
-            countPlayers--;
-            freeSeats++;
         }
+    }
+    public static Integer getMaxStamina() {
+        return MAX_STAMINA;
     }
 
-    public void info(){
-        if (countPlayers < 6){
-            System.out.println("Команды неполные. На поле еще есть " + freeSeats + " свободных мест");
-        }else if (countPlayers == 6){
-            System.out.println("На поле нет свободных мест, " + countPlayers + " игроков в игре");
-        }
+    @Override
+    public String toString() {
+        return "Player{" +
+                "name='" + name + '\'' +
+                ", stamina=" + stamina +
+                '}';
     }
+
 }

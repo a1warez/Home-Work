@@ -1,6 +1,10 @@
 package HW.OOP.House;
 
+
 import java.util.Objects;
+
+public class House {
+
 
 public class House {
 
@@ -29,6 +33,8 @@ public class House {
         return Objects.hash(numberOfFloors, numberOfRooms, garage);
     }
 
+ master
+
     @Override
     public String toString() {
         return "House{" +
@@ -37,20 +43,30 @@ public class House {
                 ", garage=" + garage +
                 '}';
     }
+
     public static class Builder {
         private int numberOfFloors;
         private int numberOfRooms;
         private boolean garage;
+
         public Builder() {
         }
+
+
+        public Builder() {
+
+        }
+
         public Builder numberOfFloors(int numberOfFloors) {
             this.numberOfFloors = numberOfFloors;
             return this;
         }
+
         public Builder numberOfRooms(int numberOfRooms) {
             this.numberOfRooms = numberOfRooms;
             return this;
         }
+
         public Builder garage(boolean garage) {
             this.garage = garage;
             return this;
@@ -64,6 +80,7 @@ public class House {
                     ", garage=" + garage +
                     '}';
         }
+
         public House build() {
             return new House(this);
         }

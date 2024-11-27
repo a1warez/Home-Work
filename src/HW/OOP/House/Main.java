@@ -1,5 +1,6 @@
 package HW.OOP.House;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,6 +45,28 @@ public class Main {
         System.out.println(house.hashCode());
         System.out.println(house3.hashCode());
         System.out.println(house.equals(house3));
+
+public class Main {
+    public static void main(String[] args) {
+        House house = new House.Builder()
+                .numberOfRooms(3)
+                .numberOfFloors(7)
+                .garage(false)
+                .build();
+        System.out.println(house);
+
+        House house1 = new House.Builder()
+                .numberOfFloors(13)
+                .numberOfRooms(4)
+                .garage(true)
+                .build();
+        System.out.println(house1);
+
+        House house2 = new House.Builder()
+                .numberOfFloors(5)
+                .garage(false)
+                .build();
+        System.out.println(house2);
 
 
     }

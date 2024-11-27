@@ -1,6 +1,13 @@
 package HW.OOP.House;
 
+
+import java.util.Objects;
+
 public class House {
+
+
+public class House {
+
     private int numberOfFloors;
     private int numberOfRooms;
     private boolean garage;
@@ -11,6 +18,22 @@ public class House {
         this.garage = builder.garage;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        House house = (House) o;
+        return numberOfFloors == house.numberOfFloors
+                && numberOfRooms == house.numberOfRooms
+                && garage == house.garage;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numberOfFloors, numberOfRooms, garage);
+    }
+
+ master
 
     @Override
     public String toString() {
@@ -25,6 +48,10 @@ public class House {
         private int numberOfFloors;
         private int numberOfRooms;
         private boolean garage;
+
+        public Builder() {
+        }
+
 
         public Builder() {
 

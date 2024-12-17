@@ -1,9 +1,12 @@
 package HW.OOP.StreamAPI;
 
-import java.util.*;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
-import static HW.OOP.StreamAPI.Book.*;
+import static HW.OOP.StreamAPI.Book.getIdBook;
 
 public class Library {
     private static Book book;
@@ -77,17 +80,17 @@ public class Library {
         long result;
         long count = 0;
         if (b == true) {
-             count = books.values()
+            count = books.values()
                     .stream()
                     .filter(Book::isAvailable)
                     .count();
             return count;
         }else if (b == false) {
-             result = books.values()
+            result = books.values()
                     .stream()
                     .filter(Book::isAvailable)
                     .count();
-           count = books.size() - result;
+            count = books.size() - result;
             return count;
         }
         return count;

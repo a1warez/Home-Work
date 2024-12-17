@@ -29,7 +29,5 @@ public class Main {
 
         System.out.println(Library.bookListSortedName());
         System.out.println(Library.author());
-
-
     }
 }

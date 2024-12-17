@@ -120,4 +120,37 @@ public class Library {
         int g = book.getId();
         books.put(g, book);
     }
+
+    /**
+     *
+     * @return возвращяет списки по true и false
+     */
+    public static Map<Boolean, List<Book>> getPartitioningByIsAvailable() {
+        Map<Boolean, List<Book>> f = books.values()
+                .stream()
+                .collect(Collectors.partitioningBy(Book::isAvailable));
+        return f;
+    }
+
+    /**
+     *
+     * @return книги группируются по авторам
+     */
+    public static Map<String, List<Book>> getGroupingByAuthor(){
+      return books.values()
+              .stream()
+              .collect(Collectors.groupingBy(Book::getAuthor));
+    }
+
+    /**
+     * v2
+     * @param o Integer id Book
+     * @return находит Book по id
+     */
+    public static Book getBookIDv2(Integer o) {
+        if (!books.containsKey(o)) {
+            System.out.println("Книга с id " + o + " не найдена");
+        }
+        return books.get(o);
+    }
 }

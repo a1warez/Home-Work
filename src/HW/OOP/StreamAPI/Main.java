@@ -29,5 +29,10 @@ public class Main {
 
         System.out.println(Library.bookListSortedName());
         System.out.println(Library.author());
+
+        System.out.println(Library.getPartitioningByIsAvailable());
+        System.out.println(Library.getGroupingByAuthor());
+
+        System.out.println(Library.getBookIDv2(1));
     }
 }

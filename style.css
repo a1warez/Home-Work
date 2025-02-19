@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.task-one {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+h1 {
+    font-size: 2.5em;
+    color: #663399;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: rgb(101, 131, 170);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: rgb(101, 131, 170);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h4{
+    color: rgb(101, 131, 170);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.font{
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+}
